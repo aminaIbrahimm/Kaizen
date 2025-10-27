@@ -19,7 +19,7 @@ export default function Sidebar() {
     <div>
       <aside
         id="logo-sidebar"
-        className="fixed top-2 left-0 z-40 w-80 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
+        className="fixed top-2 left-0 z-40 w-70 h-screen pt-16 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
         aria-label="Sidebar"
       >
         <div className="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
@@ -27,9 +27,9 @@ export default function Sidebar() {
             <li>
               <a
                 href="#"
-                className="flex font-bold text-[18px] items-center p-2 text-blue-950 rounded-lg dark:text-gray-100 hover:text-[#adb4bf] group"
+                className="flex font-bold text-[15px] items-center p-2 text-blue-950 rounded-lg dark:text-gray-100 hover:text-[#adb4bf] group"
               >
-                <SlHome className="text-xl" />
+                <SlHome className="text-lg" />
                 <span className="ms-3">My Dashboard</span>
               </a>
             </li>
@@ -37,9 +37,9 @@ export default function Sidebar() {
               <button
                 type="button"
                 onClick={() => setOpenCareer(!openCareer)}
-                className="flex font-bold text-[18px] items-center w-full p-2 text-base text-blue-950 transition duration-75 rounded-lg group hover:text-[#adb4bf] dark:text-gray-100 cursor-pointer"
+                className="flex font-bold text-[15px] items-center w-full p-2 text-base text-blue-950 transition duration-75 rounded-lg group hover:text-[#adb4bf] dark:text-gray-100 cursor-pointer"
               >
-                <HiOutlineSquares2X2 className="text-xl" />
+                <HiOutlineSquares2X2 className="text-lg" />
                 <span className="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">
                   My Learning Journey
                 </span>
@@ -81,9 +81,9 @@ export default function Sidebar() {
             <li>
               <a
                 href="#"
-                className="flex font-bold text-[18px] items-center p-2 text-blue-950 rounded-lg dark:text-gray-100 hover:text-[#adb4bf] group"
+                className="flex font-bold text-[15px] items-center p-2 text-blue-950 rounded-lg dark:text-gray-100 hover:text-[#adb4bf] group"
               >
-                <MdOutlineCardTravel className="text-xl" />
+                <MdOutlineCardTravel className="text-lg" />
                 <span className="flex-1 ms-3 witespace-nowrap">
                   Careers & Roles
                 </span>
@@ -92,9 +92,9 @@ export default function Sidebar() {
             <li>
               <a
                 href="#"
-                className="flex font-bold text-[18px] items-center p-2 text-blue-950 rounded-lg dark:text-gray-100 hover:text-[#adb4bf] group"
+                className="flex font-bold text-[15px] items-center p-2 text-blue-950 rounded-lg dark:text-gray-100 hover:text-[#adb4bf] group"
               >
-                <PiCertificateLight className="text-xl" />
+                <PiCertificateLight className="text-lg" />
                 <span className="flex-1 ms-3 whitespace-nowrap">
                   Get Certified
                 </span>
@@ -103,9 +103,9 @@ export default function Sidebar() {
             <li>
               <a
                 href="#"
-                className="flex font-bold text-[18px] items-center p-2 text-blue-950 rounded-lg dark:text-gray-100 hover:text-[#adb4bf] group"
+                className="flex font-bold text-[15px] items-center p-2 text-blue-950 rounded-lg dark:text-gray-100 hover:text-[#adb4bf] group"
               >
-                <GrCatalogOption className="text-xl" />
+                <GrCatalogOption className="text-lg" />
                 <span className="flex-1 ms-3 whitespace-nowrap">
                   Course Catalog
                 </span>
@@ -115,9 +115,9 @@ export default function Sidebar() {
               <button
                 type="button"
                 onClick={() => setOpenResource(!openResource)}
-                className="flex font-bold text-[18px] items-center w-full p-2 text-base text-blue-950 transition duration-75 rounded-lg group hover:text-[#adb4bf] dark:text-gray-100 cursor-pointer"
+                className="flex font-bold text-[15px] items-center w-full p-2 text-base text-blue-950 transition duration-75 rounded-lg group hover:text-[#adb4bf] dark:text-gray-100 cursor-pointer"
               >
-                <LuFilePenLine className="text-xl" />
+                <LuFilePenLine className="text-lg" />
                 <span className="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">
                   Resource Center
                 </span>
@@ -184,9 +184,9 @@ export default function Sidebar() {
             <li>
               <a
                 href="#"
-                className="flex font-bold text-[18px] items-center p-2 text-blue-950 rounded-lg dark:text-gray-100 hover:text-[#adb4bf] group"
+                className="flex font-bold text-[15px] items-center p-2 text-blue-950 rounded-lg dark:text-gray-100 hover:text-[#adb4bf] group"
               >
-                <FaUsers className="text-xl" />
+                <FaUsers className="text-lg" />
                 <span className="flex-1 ms-3 whitespace-nowrap inline-flex items-center gap-2">
                   Communit
                   <CiLock />
@@ -197,9 +197,9 @@ export default function Sidebar() {
               <button
                 type="button"
                 onClick={() => setOpentools(!openTools)}
-                className="flex items-center w-full p-2 font-bold text-[18px] text-blue-950 transition duration-75 rounded-lg group hover:text-[#adb4bf] dark:text-gray-100 cursor-pointer"
+                className="flex items-center w-full p-2 font-bold text-[15px] text-blue-950 transition duration-75 rounded-lg group hover:text-[#adb4bf] dark:text-gray-100 cursor-pointer"
               >
-                <TbTriangleSquareCircle className="text-xl" />
+                <TbTriangleSquareCircle className="text-lg" />
                 <span className="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">
                   Full-Immersion Tools
                 </span>
@@ -240,7 +240,7 @@ export default function Sidebar() {
                 </ul>
               )}
             </li>
-            <p className="bg-[#c09a53] rounded py-3 px-2 text-white text-center my-12 mx-2 flex justify-center items-center gap-3 cursor-pointer">
+            <p className="bg-[#c09a53] rounded py-3 px-2 text-white text-center my-10 mx-2 flex justify-center items-center gap-3 cursor-pointer">
               <HiMiniBolt className="text-2xl" />
               Get Full Access
             </p>
@@ -249,7 +249,7 @@ export default function Sidebar() {
                 href="#"
                 className="flex items-center p-2 text-blue-950 rounded-lg dark:text-gray-100 hover:text-[#adb4bf] group"
               >
-                <IoHelpCircleOutline className="text-xl" />
+                <IoHelpCircleOutline className="text-lg" />
                 <span className="flex-1 ms-3 whitespace-nowrap">
                   Help Center
                 </span>
@@ -260,7 +260,7 @@ export default function Sidebar() {
                 href="#"
                 className="flex items-center p-2 text-blue-950 rounded-lg dark:text-gray-100 hover:text-[#adb4bf] group">
               
-                <MdOutlineWbIncandescent className="text-xl" />
+                <MdOutlineWbIncandescent className="text-lg" />
                 <span className="flex-1 ms-3 whitepace-nowrap">
                   What's New
                 </span>

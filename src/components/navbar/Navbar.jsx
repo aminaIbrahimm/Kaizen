@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <>
       <nav className="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
-        <div className="px-3 py-3 lg:px-5 lg:pl-3">
+        <div className="px-3 py-1 lg:px-5 lg:pl-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center justify-start rtl:justify-end">
               <button
@@ -45,7 +45,7 @@ export default function Navbar() {
                   />
                 </svg>
               </button>
-              <a href="/" className="flex ms-2 md:me-24">
+              <a href="/" className="flex ms-2 md:me-12">
                 <img
                   src={darkMode ? kaizenLogoDark : kaizenLogoLight}
                   className="h-14"
@@ -59,7 +59,7 @@ export default function Navbar() {
                 <input
                   type="search"
                   placeholder="What would you like to learn?"
-                  className=" dark:text-gray-100 w-full p-2 pl-10 rounded-full bg-gray-100 dark:bg-[#233143] text-xl focus:outline-none "
+                  className=" dark:text-gray-100 w-full p-2 pl-10 rounded-full bg-gray-100 dark:bg-[#233143] text-lg focus:outline-none "
                 />
                 <IoSearchSharp  className="absolute left-3 top-1/2 w-5 h-5 -translate-y-1/2 text-blue-900" />
               </div>
