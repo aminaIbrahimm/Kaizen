@@ -1,6 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import kaizenLogoLight from '../../assets/kaizenlogo.png'
+import { FaAngleUp, FaChevronDown, FaRegUser} from "react-icons/fa6";
+import { CiDark } from "react-icons/ci";
+import kaizenLogoDark from '../../assets/logodark.png'
+import { RiShutDownLine } from "react-icons/ri";
+import { IoSearchSharp } from "react-icons/io5";
 
 export default function Navbar() {
+  const [openAccountMenu, setOpenAccountMenu] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [darkMode]);
   return (
     <>
       <nav className="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
@@ -29,87 +45,72 @@ export default function Navbar() {
                   />
                 </svg>
               </button>
-              <a href="https://flowbite.com" className="flex ms-2 md:me-24">
+              <a href="/" className="flex ms-2 md:me-24">
                 <img
-                  src="https://flowbite.com/docs/images/logo.svg"
-                  className="h-8 me-3"
-                  alt="FlowBite Logo"
+                  src={darkMode ? kaizenLogoDark : kaizenLogoLight}
+                  className="h-14"
+                  alt="kaizen logo"
                 />
-                <span className="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">
-                  Flowbite
-                </span>
               </a>
+              <span className="font-bold hidden md:block text-[#233143] text-xl dark:text-gray-100">
+                Member Dashboard
+              </span>
+              <div className="relative hidden md:block w-96 ms-7">
+                <input
+                  type="search"
+                  placeholder="What would you like to learn?"
+                  className=" dark:text-gray-100 w-full p-2 pl-10 rounded-full bg-gray-100 dark:bg-[#233143] text-xl focus:outline-none "
+                />
+                <IoSearchSharp  className="absolute left-3 top-1/2 w-5 h-5 -translate-y-1/2 text-blue-900" />
+              </div>
             </div>
+
             <div className="flex items-center">
+              <button onClick={() => setDarkMode(!darkMode)}>
+                <CiDark className="text-2xl cursor-pointer dark:text-white hover:text-[#adb4bf]" />
+              </button>
+
               <div className="flex items-center ms-3">
                 <div>
                   <button
                     type="button"
-                    className="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                    onClick={() => setOpenAccountMenu(!openAccountMenu)}
+                    className="flex items-center md:text-xl md:font-semibold text-[#233143] dark:text-gray-100 cursor-pointer"
                     aria-expanded="false"
                     data-dropdown-toggle="dropdown-user"
                   >
                     <span className="sr-only">Open user menu</span>
-                    <img
-                      className="w-8 h-8 rounded-full"
-                      src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
-                      alt="user photo"
-                    />
+                    <p>My Account</p>
+                    {openAccountMenu ? (
+                      <FaAngleUp className="md:ms-2 text-sm" />
+                    ) : (
+                      <FaChevronDown className="md:ms-2 text-sm" />
+                    )}
                   </button>
                 </div>
                 <div
-                  className="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-sm shadow-sm dark:bg-gray-700 dark:divide-gray-600"
+                  className="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-sm shadow-sm dark:bg-gray-700 dark:divide-gray-600 w-40"
                   id="dropdown-user"
                 >
-                  <div className="px-4 py-3" role="none">
-                    <p
-                      className="text-sm text-gray-900 dark:text-white"
-                      role="none"
-                    >
-                      Neil Sims
-                    </p>
-                    <p
-                      className="text-sm font-medium text-gray-900 truncate dark:text-gray-300"
-                      role="none"
-                    >
-                      neil.sims@flowbite.com
-                    </p>
-                  </div>
                   <ul className="py-1" role="none">
                     <li>
                       <a
                         href="#"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                        className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
                         role="menuitem"
                       >
-                        Dashboard
+                        <FaRegUser />
+                        Profile
                       </a>
                     </li>
                     <li>
                       <a
                         href="#"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                        className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
                         role="menuitem"
                       >
-                        Settings
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
-                        role="menuitem"
-                      >
-                        Earnings
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
-                        role="menuitem"
-                      >
-                        Sign out
+                        <RiShutDownLine />
+                        Logout
                       </a>
                     </li>
                   </ul>
