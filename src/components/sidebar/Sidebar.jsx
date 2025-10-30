@@ -10,6 +10,7 @@ import { CiLock } from "react-icons/ci";
 import { IoHelpCircleOutline } from "react-icons/io5";
 import { HiMiniBolt } from "react-icons/hi2";
 import { TbTriangleSquareCircle } from "react-icons/tb";
+import { NavLink } from 'react-router';
 
 export default function Sidebar() {
     const [openCareer , setOpenCareer] = useState(false)
@@ -25,13 +26,15 @@ export default function Sidebar() {
         <div className="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
           <ul className="space-y-2 font-medium">
             <li>
-              <a
-                href="#"
-                className="flex font-bold text-[15px] items-center p-2 text-blue-950 rounded-lg dark:text-gray-100 hover:text-[#adb4bf] group"
+              <NavLink
+                to="/dashboard"
+                end
+                className={({isActive}) => `flex font-bold text-[15px] items-center p-2 rounded-lg  hover:text-[#a9af89] group ${isActive ? 'text-[#a9af89] dark:text-[#a9af89]' : 'text-blue-950 dark:text-gray-100'}`}
+                
               >
                 <SlHome className="text-lg" />
                 <span className="ms-3">My Dashboard</span>
-              </a>
+              </NavLink>
             </li>
             <li>
               <button

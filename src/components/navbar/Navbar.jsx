@@ -45,14 +45,14 @@ export default function Navbar() {
                   />
                 </svg>
               </button>
-              <a href="/" className="flex ms-2 md:me-12">
+              <a href="/" className="flex ms-2 md:me-10">
                 <img
                   src={darkMode ? kaizenLogoDark : kaizenLogoLight}
                   className="h-14"
                   alt="kaizen logo"
                 />
               </a>
-              <span className="font-bold hidden md:block text-[#233143] text-xl dark:text-gray-100">
+              <span className="font-bold hidden xl:block text-[#233143] text-xl dark:text-gray-100">
                 Member Dashboard
               </span>
               <div className="relative hidden md:block w-96 ms-7">

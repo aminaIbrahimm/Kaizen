@@ -1,14 +1,21 @@
 import './App.css'
-import Navbar from './components/navbar/Navbar'
-import Sidebar from './components/sidebar/Sidebar'
-// import { createBrowserRouter } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Layout from './components/layout/Layout';
+import Dashboard from './components/dashboard/Dashboard';
+
 function App() {
-  // createBrowserRouter()
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <Layout />,
+      children: [
+        { index: true, element: <Dashboard /> }, // make Dashboard the default route
+        { path: 'dashboard', element: <Dashboard /> },
+      ],
+    },
+  ])
   return (
-    <>
-      <Navbar/>
-      <Sidebar/>
-    </>
+    <RouterProvider router={router}/>
   )
 }
 
