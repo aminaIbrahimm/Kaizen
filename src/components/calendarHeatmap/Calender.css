@@ -1,0 +1,28 @@
+
+.react-calendar-heatmap .color-gitlab-1 {
+  fill: #93b8d3;
+}
+.react-calendar-heatmap .color-gitlab-2 {
+  fill: #7399be;
+}
+.react-calendar-heatmap .color-gitlab-3 {
+  fill: #49729b;
+}
+.react-calendar-heatmap .color-gitlab-4 {
+  fill: #254e77;
+}
+.dark .react-calendar-heatmap .color-gitlab-1 {
+  fill: #93b8d3;
+}
+.dark .react-calendar-heatmap .color-gitlab-2 {
+  fill: #7399be;
+}
+.dark .react-calendar-heatmap .color-gitlab-3 {
+  fill: #49729b;
+}
+.dark .react-calendar-heatmap .color-gitlab-4 {
+  fill: #254e77;
+}
+.dark .react-calendar-heatmap .color-empty {
+  fill: #a8a7a7; 
+}

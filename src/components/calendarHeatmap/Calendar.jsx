@@ -1,9 +1,10 @@
 import React from 'react'
-import './Calender.module.css'
+import './Calender.css'
 import { Tooltip as ReactTooltip } from "react-tooltip";
 import CalendarHeatmap from 'react-calendar-heatmap';
 import 'react-calendar-heatmap/dist/styles.css';
 import "react-tooltip/dist/react-tooltip.css";
+import { PiArrowFatLinesRightDuotone } from 'react-icons/pi';
 
 export default function Calendar() {
     const today = new Date();
@@ -15,14 +16,14 @@ export default function Calendar() {
         { date: `${currentYear}-01-22`, count: 4 },
         { date: `${currentYear}-01-30`, count: 3 },
         { date: `${currentYear}-02-25`, count: 1 },
-        { date: `${currentYear}-02-10`, count: 0 },
-        { date: `${currentYear}-01-25`, count: 0 },
       ];
   return (
     <>
-      <div className="bg-white p-10 rounded shadow-md dark:bg-[#2b3a50] dark:shadow-xl">
-        <p className="text-gray-800 dark:text-gray-100 mb-10 text-xl font-semibold">
-          Total Engagement This Year
+      <div className="bg-white hidden lg:p-10 lg:block rounded shadow-xl dark:bg-gray-900 mb-5 dark:shadow-xl">
+        <p className="flex items-center justify-center text-gray-800 dark:text-gray-100 mb-10 text-xl font-semibold">
+          Total Engagement This Year{" "}
+          <PiArrowFatLinesRightDuotone className="ms-2" />{" "}
+          <span className="font-bold ms-3 text-3xl">{currentYear}</span>
         </p>
         <CalendarHeatmap
           startDate={startDate}
@@ -52,15 +53,14 @@ export default function Calendar() {
         />
         <ReactTooltip id="heatmap-tooltip" place="top" />
         <p className="flex items-center justify-end text-gray-800 dark:text-gray-100">
-          Less{" "}
-          <span className="bg-[#ededed] w-3 h-3 ms-1 rounded block"></span>
-          <span className="bg-[#acd5f2] w-3 h-3 ms-1  rounded block"></span>
-          <span className="bg-[#7fa8d1] w-3 h-3 ms-1 rounded block"></span>
+          Less <span className="bg-[#c0bebe] w-3 h-3 ms-1 rounded block"></span>
+          <span className="bg-[#93b8d3] w-3 h-3 ms-1  rounded block"></span>
+          <span className="bg-[#7399be] w-3 h-3 ms-1 rounded block"></span>
           <span className="bg-[#49729b] w-3 h-3 ms-1 rounded block"></span>
           <span className="bg-[#254e77] w-3 h-3 ms-1 me-1 rounded block"></span>
-          More 
+          More
         </p>
       </div>
     </>
-  )
+  );
 }
